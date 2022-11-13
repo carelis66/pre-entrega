@@ -1,20 +1,21 @@
-export class LoginPage {
+export class Login {
     constructor() {
-        this.userInput = "#user";
-        this.passInput = "#pass";
-        this.buttonLogin = "#submitForm";
+        this.userInput = '[id="user"]'
+        this.passInput = '#pass'
+        this.loginButton = '[id="submitForm"]'
     }
 
-    writeUser(user) {
-        cy.get(this.userInput).type(user);
-    };
 
-    writePass(password) {
-        cy.get(this.passInput).type(password);
-    };
+    writingUser(user) {
+    cy.get(this.userInput).type(user);
+    }
 
-    clickButtonLogin() {
-        cy.get(this.buttonLogin).click();
-    };
-};
+    writingPass(pass) {
+        cy.get(this.passInput).type(pass);
+        }
+    clickLoginButton(){
+        cy.get(this.loginButton).click();
+    }
+    }
+
 
