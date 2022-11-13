@@ -1,32 +1,20 @@
-export class ProductsPage {
-    constructor() {
-        this.cup = '#redcup';
-        this.sweter = '#pinksweater';
-        this.select = '#closeModal';
-        this.goCar= '#goShoppingCart';
-    };
-
-    addCup(product1) {
-        cy.get(this.cup).click(product1);
-    };
-
-    clickSelection(){
-        cy.get(this.select).click;
+export class ProductsPage{
+    constructor(){
+        
+        this.modalButton = ('#closeModal');
+       
+        this.buttonGoShoppingCart = ('#goShoppingCart');
+    }
+    selectProduct(product){
+        cy.get(`button[value='${product}']`).click();
+    }
+        clickOnClosemodal()
+    {
+        cy.get(this.modalButton).click();
+    }
+     clickButtonGoShoppingCart()
+    {
+        cy.get(this.buttonGoShoppingCart).click();
     }
 
-    addSweter(product2) {
-        cy.get(this.sweter).click(product2);
-    };
-    
-
-    clickSelection(){
-        cy.get(this.select).click();
-    }
-
-    clickCar(){
-        cy.get(this.goCar).click();
-    }
-
-            
-   
-};
+}
