@@ -1,28 +1,21 @@
-export class ShoppingCartPage {
-
+export class ShopingCartPage{
     constructor()
     {
         this.showtotal = ('//button[text()="Show total price"]');
-        this.confirm1 = ':nth-child(2) > .css-1l5ko5i > #productPrice';
-        this.confirm2 = ':nth-child(3) > .css-1l5ko5i > #productPrice';
         this.total = "#price";
-        
     }
-    verifyProduct(verifyproduct)
+    checkProduct(checkproduct)
     {
-        return cy.get(`p[name='${verifyproduct}']`);
+        return cy.get(`p[name='${checkproduct}']`);
     }
-    verifyPrices1(){
-        cy.get(this.confirm1).click();
-        
+    checkDataProduct(Name,Price){
+        return cy.xpath(`//p[@name='${Name}']//following-sibling::p[@name=${Price}]`);
 
     }
-    verifyPrices2(){
-        cy.get(this.confirm2).click();
-        
+    clickOnShowTotalPrice(){
+        return cy.xpath(this.showtotal);
     }
-    checkAddition(){
+    groupPrice(){
         return cy.get(this.total);
     }
-    
-};
+}
