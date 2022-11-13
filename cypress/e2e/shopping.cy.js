@@ -14,22 +14,16 @@ describe('pre-entrega', () =>
     const login = new Login();
     const shop = new Shop();
     const productsPage = new ProductsPage();
-    const shopingCartPage = new ShopingCartPage();
-
-    
+    const shopingCartPage = new ShopingCartPage();   
     before('Before', () => {
         cy.fixture('LoginData').then(datos => {
             LoginData = datos
-
         })
         cy.fixture('productsdata').then(products =>{
             productsdata = products
-        })
-        
+        })        
     })
-
     it('pre-entrega', () => {
-
         let suma = (productsdata.productOne.Price1) + (productsdata.productTwo.Price2);
         let Name1 = productsdata.productOne.Name
         let priceOne = productsdata.productOne.Price1
