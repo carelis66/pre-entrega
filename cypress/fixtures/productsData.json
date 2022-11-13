@@ -1,12 +1,14 @@
 {
-    "product1": {
+    "productOne": {
         "Name": "Red Cap",
-        "Price2": 10
+        "Price1": 10
     },
-   
-    "product2": {
+    
+    "productTwo": {
         "Name": "Pink Sweater",
         "Price2": 18
     }
+   
+   
   
     }
