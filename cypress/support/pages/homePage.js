@@ -1,11 +1,12 @@
-export class HomePage{
+export class Home {
     constructor() {
-        this.onLineShopLink = '#onlineshoplink'; 
-    };
+        this.buttonLogin = "#registertoggle";
+    }
 
-    clickOnLineShopLink(){
-        cy.get(this.onLineShopLink).click();
-    };
+    clickButtonLogin() {
+        cy.get(this.buttonLogin).dblclick();
+    }
 
-    
-};
+
+
+}
